@@ -5,7 +5,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, CheckCircle2, AlertCircle, Cog } from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import {
   InputOTP,
   InputOTPGroup,

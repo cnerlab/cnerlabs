@@ -71,7 +71,7 @@ export default function AdminDashboard() {
 
   // fetchData();
 
-  const [permissions, setPermissions] = useState<Permission[]>([]);
+  const [_, setPermissions] = useState<Permission[]>([]);
   const [fetchingData, setFetchingData] = useState(true);
   const [totalComponents, setTotalComponents] = useState<number>(0);
   const [pendingRequests, setPendingRequests] = useState<number>(0);

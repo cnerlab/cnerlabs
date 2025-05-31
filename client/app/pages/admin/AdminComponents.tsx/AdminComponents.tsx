@@ -38,8 +38,6 @@ import { Toaster, toast } from "sonner";
 import { Plus, Edit, Trash2, Package, Loader2 } from "lucide-react";
 import AdminLayout from "@/layout/AdminLayout";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import type { RootState } from "@/store/store";
 
 interface Component {
   _id: string;

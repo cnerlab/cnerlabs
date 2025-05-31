@@ -23,11 +23,6 @@ interface Component {
   quantity: number;
 }
 
-interface CartItem {
-  componentId: string;
-  quantity: number;
-}
-
 const Components: React.FC = () => {
   const [components, setComponents] = useState<Component[]>([]);
   const [cart, setCart] = useState<Map<string, number>>(new Map());

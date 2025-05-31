@@ -62,7 +62,6 @@ import {
   Plus,
   Minus,
   Trash2,
-  ArrowLeft,
   Package,
   AlertCircle,
   CheckCircle,

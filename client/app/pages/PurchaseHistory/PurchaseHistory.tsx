@@ -22,7 +22,6 @@ import {
   Calendar,
   FileText,
   AlertTriangle,
-  ArrowLeft,
 } from "lucide-react";
 
 interface Purchase {

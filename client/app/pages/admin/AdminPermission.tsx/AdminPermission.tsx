@@ -32,13 +32,9 @@ interface Permission {
   userName: string;
   quantity: number;
   status: "pending" | "approved" | "rejected";
-  createdAt?: string;
+  createdAt: string;
   approvedDate?: string;
   rejectedDate?: string;
-}
-
-interface IsAdmin {
-  role: string;
 }
 
 const AdminPermission: React.FC = () => {

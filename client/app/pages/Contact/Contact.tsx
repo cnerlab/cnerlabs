@@ -10,14 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
+import { Mail, MapPin, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const contactInfo = [
   {
