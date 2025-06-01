@@ -202,7 +202,9 @@ export default function AdminDashboard() {
                 Add, edit, and manage electronic components in your inventory.
               </p>
               <Button
-                onClick={() => (window.location.href = "/admin/components")}
+                onClick={() =>
+                  (window.location.href = "/cnerlabs/admin/components")
+                }
               >
                 Manage Components
               </Button>
@@ -220,7 +222,9 @@ export default function AdminDashboard() {
                 Review and approve component access requests from users.
               </p>
               <Button
-                onClick={() => (window.location.href = "/admin/permissions")}
+                onClick={() =>
+                  (window.location.href = "/cnerlabs/admin/permissions")
+                }
               >
                 Review Requests
               </Button>
@@ -238,7 +242,9 @@ export default function AdminDashboard() {
                 Supervise the component and the return date
               </p>
               <Button
-                onClick={() => (window.location.href = "/admin/permissions")}
+                onClick={() =>
+                  (window.location.href = "/cnerlabs/admin/permissions")
+                }
               >
                 Review History
               </Button>
