@@ -11,5 +11,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./app"),
     },
   },
-  // base: "/cnerlabs/",
+  base: "/cnerlabs/",
+  server: {
+    open: true,
+    port: 3000,
+  },
 });
