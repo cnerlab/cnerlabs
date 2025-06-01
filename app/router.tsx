@@ -308,7 +308,7 @@ const AppRouter = () => (
             }
           />
           <Route
-            path="components"
+            path="/admin/components"
             element={
               <ProtectedAdminRoute>
                 <AdminComponents />
@@ -316,7 +316,7 @@ const AppRouter = () => (
             }
           />
           <Route
-            path="permissions"
+            path="/admin/permissions"
             element={
               <ProtectedAdminRoute>
                 <AdminPermission />
