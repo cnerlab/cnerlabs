@@ -265,10 +265,8 @@ import Contact from "./pages/Contact/Contact";
 
 const AppRouter = () => (
   <Router basename="/cnerlabs">
-    {" "}
-    {/* Add basename here */}
     <Routes>
-      <Route path="/" element={<RootWrapper />}>
+      <Route path="/cnerlabs/" element={<RootWrapper />}>
         {/* Main layout routes */}
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
