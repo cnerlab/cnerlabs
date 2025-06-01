@@ -298,7 +298,7 @@ const AppRouter = () => (
         </Route>
 
         {/* Admin routes */}
-        <Route path="admin" element={<Outlet />}>
+        {/* <Route path="admin" element={<Outlet />}>
           <Route
             index
             element={
@@ -317,6 +317,41 @@ const AppRouter = () => (
           />
           <Route
             path="/admin/permissions"
+            element={
+              <ProtectedAdminRoute>
+                <AdminPermission />
+              </ProtectedAdminRoute>
+            }
+          />
+          <Route
+            path="purchases"
+            element={
+              <ProtectedAdminRoute>
+                <AdminPurchaseHistoryPage />
+              </ProtectedAdminRoute>
+            }
+          />
+        </Route> */}
+
+        <Route path="admin" element={<Outlet />}>
+          <Route
+            index
+            element={
+              <ProtectedAdminRoute>
+                <AdminDashboard />
+              </ProtectedAdminRoute>
+            }
+          />
+          <Route
+            path="components"
+            element={
+              <ProtectedAdminRoute>
+                <AdminComponents />
+              </ProtectedAdminRoute>
+            }
+          />
+          <Route
+            path="permissions"
             element={
               <ProtectedAdminRoute>
                 <AdminPermission />
