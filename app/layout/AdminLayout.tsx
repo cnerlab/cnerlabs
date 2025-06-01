@@ -37,22 +37,43 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  // const navigation = [
+  //   {
+  //     name: "Components",
+  //     href: "/admin/components",
+  //     icon: Package,
+  //     current: false,
+  //   },
+  //   {
+  //     name: "Permissions",
+  //     href: "/admin/permissions",
+  //     icon: FileText,
+  //     current: false,
+  //   },
+  //   {
+  //     name: "Purchase History",
+  //     href: "/admin/purchases",
+  //     icon: History,
+  //     current: false,
+  //   },
+  // ];
+
   const navigation = [
     {
       name: "Components",
-      href: "/admin/components",
+      href: "/cnerlabs/admin-components",
       icon: Package,
       current: false,
     },
     {
       name: "Permissions",
-      href: "/admin/permissions",
+      href: "/cnerlabs/admin-permissions",
       icon: FileText,
       current: false,
     },
     {
       name: "Purchase History",
-      href: "/admin/purchases",
+      href: "/cnerlabs/admin-purchases",
       icon: History,
       current: false,
     },

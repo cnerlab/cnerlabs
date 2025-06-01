@@ -72,7 +72,7 @@ function LoginForm({
 
         localStorage.setItem("role", response.data.role);
         if (response.data.role === "admin") {
-          navigate("/admin-components");
+          navigate("/admin-dashboard");
         } else {
           navigate("/");
         }
