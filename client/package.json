@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "cd client && npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "deploy-client": "npm run deploy"
   },
