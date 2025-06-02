@@ -18,6 +18,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 interface Stats {
   totalComponents: number;
@@ -129,6 +130,8 @@ const Home: React.FC = () => {
     },
   };
 
+  const isActive = (path: string) => location.pathname === path;
+
   if (!mounted) {
     return null;
   }
@@ -216,14 +219,18 @@ const Home: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={itemVariants}
           >
-            <Button
-              size="lg"
-              onClick={() => (window.location.href = `/cnerlabs/components`)}
-              className="group"
+            <Link
+              to="/components"
+              className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors ${
+                isActive("/components")
+                  ? "text-blue-600 font-bold border-blue-600"
+                  : "text-muted-foreground border-muted"
+              }`}
             >
               Browse Components
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </Link>
+
             {/* <Button
               variant="outline"
               size="lg"
@@ -493,22 +500,37 @@ const Home: React.FC = () => {
               ComponentLab to bring their projects to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                onClick={() => (window.location.href = `/cnerlabs/components`)}
-                className="group"
+              <Link
+                to="/components"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors ${
+                  isActive("/components")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
               >
+                <ShoppingCart className="h-4 w-4" />
                 Browse Components
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
+              </Link>
+              {/* <Button
                 variant="outline"
                 size="lg"
                 onClick={() => (window.location.href = `/cnerlabs/cart`)}
               >
                 <ShoppingCart className="mr-2 h-4 w-4" />
                 View Cart
-              </Button>
+              </Button> */}
+
+              <Link
+                to="/cart"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors ${
+                  isActive("/cart")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
+              >
+                <ShoppingCart className="h-4 w-4" />
+                View Cart
+              </Link>
             </div>
           </motion.div>
         </div>
