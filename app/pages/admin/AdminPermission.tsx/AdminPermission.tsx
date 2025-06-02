@@ -195,7 +195,7 @@ const AdminPermission: React.FC = () => {
   return (
     <>
       {/* <AdminLayout> */}
-      <div className="space-y-6">
+      <div className="space-y-6 p-4">
         {/* Header */}
         <div>
           <h1 className="text-2xl font-bold text-gray-900">
