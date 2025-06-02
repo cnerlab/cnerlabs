@@ -399,7 +399,88 @@ import ProtectedRoute from "./components/ProtectedRoutes/ProtectedRoutes";
 import ProtectedAdminRoute from "./components/ProtectedAdminRoute/ProtectedAdminRoute";
 
 const AppRouter = () => (
-  <Router basename="/cnerlabs">
+  // <Router basename="/cnerlabs">
+  //   <Routes>
+  //     <Route path="/" element={<RootWrapper />}>
+  //       {/* Main app layout */}
+  //       <Route element={<MainLayout />}>
+  //         {/* Public and user routes */}
+  //         <Route index element={<HomePage />} />
+  //         <Route path="contact" element={<Contact />} />
+
+  //         <Route
+  //           path="components"
+  //           element={
+  //             <ProtectedRoute>
+  //               <Components />
+  //             </ProtectedRoute>
+  //           }
+  //         />
+
+  //         <Route
+  //           path="cart"
+  //           element={
+  //             <ProtectedRoute>
+  //               <CartPage />
+  //             </ProtectedRoute>
+  //           }
+  //         />
+
+  //         <Route
+  //           path="purchases"
+  //           element={
+  //             <ProtectedRoute>
+  //               <PurchaseHistoryPage />
+  //             </ProtectedRoute>
+  //           }
+  //         />
+
+  //         {/* Admin routes (under /, not /admin/) */}
+  //         <Route
+  //           path="admin-dashboard"
+  //           element={
+  //             <ProtectedAdminRoute>
+  //               <AdminDashboard />
+  //             </ProtectedAdminRoute>
+  //           }
+  //         />
+
+  //         <Route
+  //           path="admin-components"
+  //           element={
+  //             <ProtectedAdminRoute>
+  //               <AdminComponents />
+  //             </ProtectedAdminRoute>
+  //           }
+  //         />
+
+  //         <Route
+  //           path="admin-permissions"
+  //           element={
+  //             <ProtectedAdminRoute>
+  //               <AdminPermission />
+  //             </ProtectedAdminRoute>
+  //           }
+  //         />
+
+  //         <Route
+  //           path="admin-purchases"
+  //           element={
+  //             <ProtectedAdminRoute>
+  //               <AdminPurchaseHistoryPage />
+  //             </ProtectedAdminRoute>
+  //           }
+  //         />
+  //       </Route>
+
+  //       {/* Auth routes */}
+  //       <Route path="auth/login" element={<Login />} />
+  //       <Route path="auth/signup" element={<SignUp />} />
+  //     </Route>
+  //   </Routes>
+  // </Router>
+
+  <Router>
     <Routes>
       <Route path="/" element={<RootWrapper />}>
         {/* Main app layout */}
