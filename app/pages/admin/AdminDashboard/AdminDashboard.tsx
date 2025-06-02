@@ -215,7 +215,7 @@ export default function AdminDashboard() {
 
               <Link
                 to="/admin-components"
-                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black text-white ${
                   isActive("/admin-components")
                     ? "text-blue-600 font-bold border-blue-600"
                     : "text-muted-foreground border-muted"
@@ -246,7 +246,7 @@ export default function AdminDashboard() {
 
               <Link
                 to="/admin-permissions"
-                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black text-white ${
                   isActive("/admin-permissions")
                     ? "text-blue-600 font-bold border-blue-600"
                     : "text-muted-foreground border-muted"
@@ -277,7 +277,7 @@ export default function AdminDashboard() {
 
               <Link
                 to="/admin-purchases"
-                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black text-white ${
                   isActive("/admin-purchases")
                     ? "text-blue-600 font-bold border-blue-600"
                     : "text-muted-foreground border-muted"
