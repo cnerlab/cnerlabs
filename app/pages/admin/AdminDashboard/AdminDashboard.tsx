@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Package, FileText, Users, TrendingUp } from "lucide-react";
-import AdminLayout from "@/layout/AdminLayout";
+// import AdminLayout from "@/layout/AdminLayout";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -122,7 +122,8 @@ export default function AdminDashboard() {
   }
 
   return (
-    <AdminLayout>
+    <>
+      {/* <AdminLayout> */}
       <div className="space-y-6">
         {/* Header */}
         <div>
@@ -252,6 +253,7 @@ export default function AdminDashboard() {
           </Card>
         </div>
       </div>
-    </AdminLayout>
+      {/* </AdminLayout> */}
+    </>
   );
 }

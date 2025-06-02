@@ -36,7 +36,7 @@ import {
   Loader2,
   AlertTriangle,
 } from "lucide-react";
-import AdminLayout from "@/layout/AdminLayout";
+// import AdminLayout from "@/layout/AdminLayout";
 
 interface Purchase {
   _id: string;
@@ -190,19 +190,22 @@ const AdminPurchaseHistoryPage: React.FC = () => {
 
   if (loading) {
     return (
-      <AdminLayout>
+      <>
+        {/* <AdminLayout> */}
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <Package className="h-12 w-12 text-gray-400 mx-auto mb-4" />
             <p className="text-gray-600">Loading purchase history...</p>
           </div>
         </div>
-      </AdminLayout>
+        {/* </AdminLayout> */}
+      </>
     );
   }
 
   return (
-    <AdminLayout>
+    <>
+      {/* <AdminLayout> */}
       <div className="space-y-6">
         {/* Header */}
         <div>
@@ -625,7 +628,8 @@ const AdminPurchaseHistoryPage: React.FC = () => {
         </Tabs>
       </div>
       <Toaster />
-    </AdminLayout>
+      {/* </AdminLayout> */}
+    </>
   );
 };
 

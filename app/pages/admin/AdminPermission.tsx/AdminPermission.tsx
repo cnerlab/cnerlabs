@@ -16,7 +16,7 @@ import {
   Package,
   Loader2,
 } from "lucide-react";
-import AdminLayout from "@/layout/AdminLayout";
+// import AdminLayout from "@/layout/AdminLayout";
 
 axios.defaults.withCredentials = true;
 
@@ -179,19 +179,22 @@ const AdminPermission: React.FC = () => {
 
   if (loading) {
     return (
-      <AdminLayout>
+      <>
+        {/* <AdminLayout> */}
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
             <p className="text-gray-600">Loading permissions...</p>
           </div>
         </div>
-      </AdminLayout>
+        {/* </AdminLayout> */}
+      </>
     );
   }
 
   return (
-    <AdminLayout>
+    <>
+      {/* <AdminLayout> */}
       <div className="space-y-6">
         {/* Header */}
         <div>
@@ -369,7 +372,8 @@ const AdminPermission: React.FC = () => {
         </Tabs>
       </div>
       <Toaster />
-    </AdminLayout>
+      {/* </AdminLayout> */}
+    </>
   );
 };
 

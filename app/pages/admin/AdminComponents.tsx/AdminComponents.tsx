@@ -36,7 +36,7 @@ import {
 } from "@/components/ui/select";
 import { Toaster, toast } from "sonner";
 import { Plus, Edit, Trash2, Package, Loader2 } from "lucide-react";
-import AdminLayout from "@/layout/AdminLayout";
+// import AdminLayout from "@/layout/AdminLayout";
 import { useNavigate } from "react-router-dom";
 
 interface Component {
@@ -224,20 +224,23 @@ const AdminComponents: React.FC = () => {
 
   if (loading) {
     return (
-      <AdminLayout>
+      <>
+        {/* <AdminLayout> */}
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <Package className="h-12 w-12 text-gray-400 mx-auto mb-4" />
             <p className="text-gray-600">Loading components...</p>
           </div>
         </div>
-      </AdminLayout>
+        {/* </AdminLayout> */}
+      </>
     );
   }
 
   if (role === "admin") {
     return (
-      <AdminLayout>
+      <>
+        {/*  <AdminLayout> */}
         <div className="space-y-6">
           {/* Header */}
           <div className="flex justify-between items-center">
@@ -600,7 +603,8 @@ const AdminComponents: React.FC = () => {
           </Dialog>
         </div>
         <Toaster richColors position="bottom-right" />
-      </AdminLayout>
+        {/* // </AdminLayout> */}
+      </>
     );
   }
 };
