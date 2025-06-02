@@ -218,7 +218,7 @@ const Home: React.FC = () => {
           >
             <Button
               size="lg"
-              onClick={() => (window.location.href = "/#/components")}
+              onClick={() => (window.location.href = "/cnerlabs/#/components")}
               className="group"
             >
               Browse Components
@@ -495,7 +495,9 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                onClick={() => (window.location.href = "/#/components")}
+                onClick={() =>
+                  (window.location.href = "/cnerlabs/#/components")
+                }
                 className="group"
               >
                 Browse Components
@@ -504,7 +506,7 @@ const Home: React.FC = () => {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => (window.location.href = "/#/cart")}
+                onClick={() => (window.location.href = "/cnerlabs/#/cart")}
               >
                 <ShoppingCart className="mr-2 h-4 w-4" />
                 View Cart
