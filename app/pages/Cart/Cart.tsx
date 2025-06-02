@@ -288,9 +288,21 @@ const CartPage: React.FC = () => {
                 Browse Components
               </Button> */}
 
-              <Link
+              {/* <Link
                 to="/components"
                 className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg w-24 transition-colors bg-black text-white ${
+                  isActive("/components")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
+              >
+                Browse Components
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link> */}
+
+              <Link
+                to="/components"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black text-white mx-auto ${
                   isActive("/components")
                     ? "text-blue-600 font-bold border-blue-600"
                     : "text-muted-foreground border-muted"

@@ -1,11 +1,12 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Package, FileText, Users, TrendingUp } from "lucide-react";
 // import AdminLayout from "@/layout/AdminLayout";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface componentId {
   _id: string;
@@ -77,6 +78,8 @@ export default function AdminDashboard() {
   const [pendingRequests, setPendingRequests] = useState<number>(0);
   const [activeUsers, setActiveUsers] = useState<number>(0);
   const [approvalRate, setApprovalRate] = useState<number>(0);
+
+  const isActive = (path: string) => location.pathname === path;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -202,13 +205,24 @@ export default function AdminDashboard() {
               <p className="text-gray-600 mb-4">
                 Add, edit, and manage electronic components in your inventory.
               </p>
-              <Button
+              {/* <Button
                 onClick={() =>
                   (window.location.href = "/cnerlabs/admin/components")
                 }
               >
                 Manage Components
-              </Button>
+              </Button> */}
+
+              <Link
+                to="/admin-components"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                  isActive("/admin-components")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
+              >
+                Manage Components
+              </Link>
             </CardContent>
           </Card>
           <Card>
@@ -222,13 +236,24 @@ export default function AdminDashboard() {
               <p className="text-gray-600 mb-4">
                 Review and approve component access requests from users.
               </p>
-              <Button
+              {/* <Button
                 onClick={() =>
                   (window.location.href = "/cnerlabs/admin/permissions")
                 }
               >
                 Review Requests
-              </Button>
+              </Button> */}
+
+              <Link
+                to="/admin-permissions"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                  isActive("/admin-permissions")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
+              >
+                Review Requests
+              </Link>
             </CardContent>
           </Card>
           <Card>
@@ -242,13 +267,24 @@ export default function AdminDashboard() {
               <p className="text-gray-600 mb-4">
                 Supervise the component and the return date
               </p>
-              <Button
+              {/* <Button
                 onClick={() =>
                   (window.location.href = "/cnerlabs/admin/permissions")
                 }
               >
                 Review History
-              </Button>
+              </Button> */}
+
+              <Link
+                to="/admin-purchases"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                  isActive("/admin-purchases")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
+              >
+                Review History
+              </Link>
             </CardContent>
           </Card>
         </div>
