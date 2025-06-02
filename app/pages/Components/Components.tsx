@@ -14,6 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ShoppingCart, Plus, Minus, Package } from "lucide-react";
 import { toast, Toaster } from "sonner";
+import { Link } from "react-router-dom";
 
 interface Component {
   _id: string;
@@ -29,6 +30,8 @@ const Components: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [quantities, setQuantities] = useState<Map<string, number>>(new Map());
   //   const toast = useToast();
+
+  const isActive = (path: string) => location.pathname === path;
 
   useEffect(() => {
     fetchComponents();
@@ -151,14 +154,26 @@ const Components: React.FC = () => {
               Browse and add components to your cart
             </p>
           </div>
-          <Button
+          {/* <Button
             variant="outline"
             className="bg-neutral-800 hover:bg-neutral-700 text-white rounded-full py-2 px-4 shadow-md flex items-center gap-2"
             onClick={() => (window.location.href = "/cart")}
           >
             <ShoppingCart className="h-4 w-4" />
             View Cart ({getTotalCartItems()})
-          </Button>
+          </Button> */}
+
+          <Link
+            to="/cart"
+            className={`bg-neutral-800 hover:bg-neutral-700 text-white rounded-full py-2 px-4 shadow-md flex items-center gap-2 ${
+              isActive("/cart")
+                ? "text-blue-600 font-bold border-blue-600"
+                : "text-muted-foreground border-muted"
+            }`}
+          >
+            <ShoppingCart className="h-4 w-4" />
+            View Cart ({getTotalCartItems()})
+          </Link>
         </div>
 
         {/* Components by Type */}

@@ -290,7 +290,7 @@ const CartPage: React.FC = () => {
 
               <Link
                 to="/components"
-                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg w-24 transition-colors bg-black text-white ${
                   isActive("/components")
                     ? "text-blue-600 font-bold border-blue-600"
                     : "text-muted-foreground border-muted"
