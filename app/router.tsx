@@ -397,6 +397,8 @@ import AdminPurchaseHistoryPage from "./pages/admin/AdminPurchaseHistory/AdminPu
 
 import ProtectedRoute from "./components/ProtectedRoutes/ProtectedRoutes";
 import ProtectedAdminRoute from "./components/ProtectedAdminRoute/ProtectedAdminRoute";
+import TermsAndConditionsPage from "./pages/TermsCondition/TermsConditionPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicy/PrivacyPolicyPage";
 
 const AppRouter = () => (
   // <Router basename="/cnerlabs">
@@ -553,6 +555,10 @@ const AppRouter = () => (
             }
           />
         </Route>
+
+        {/* terms and condition routes */}
+        <Route path="terms-condition" element={<TermsAndConditionsPage />} />
+        <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
 
         {/* Auth routes */}
         <Route path="auth/login" element={<Login />} />
