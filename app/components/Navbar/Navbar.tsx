@@ -35,6 +35,8 @@ const Navbar: React.FC = () => {
     return location.pathname === path;
   };
 
+  const isAdmin = useSelector((state: RootState) => state.auth.role);
+
   return (
     <>
       {/* <div className="flex w-full flex-col ">
@@ -242,9 +244,9 @@ const Navbar: React.FC = () => {
               Contact us
             </Link>
           </nav>
-
           {/* Sheet menu for small screens */}
-          <Sheet>
+
+          {/* <Sheet>
             <SheetTrigger asChild>
               <Button
                 variant="outline"
@@ -302,8 +304,128 @@ const Navbar: React.FC = () => {
                 </Link>
               </nav>
             </SheetContent>
-          </Sheet>
+          </Sheet> */}
+          {isAdmin === "admin" ? (
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="shrink-0 md:hidden"
+                >
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <nav className="grid gap-6 text-lg font-medium">
+                  <Link
+                    to="/admin"
+                    className={`flex items-center gap-2 text-lg font-semibold ${
+                      isActive("/") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    <img src="" alt="WN" className="h-6 w-6" />
+                    <span>CNER - LAB</span>
+                  </Link>
+                  <Link
+                    to="/admin"
+                    className={`hover:text-foreground ${
+                      isActive("/") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to="/admin/components"
+                    className={`hover:text-foreground ${
+                      isActive("/components") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Components
+                  </Link>
 
+                  <Link
+                    to="/admin/permissions"
+                    className={`hover:text-foreground ${
+                      isActive("/cart") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Permission
+                  </Link>
+
+                  <Link
+                    to="/admin/purchases"
+                    className={`hover:text-foreground ${
+                      isActive("/contact") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Purchases
+                  </Link>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          ) : (
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="shrink-0 md:hidden"
+                >
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <nav className="grid gap-6 text-lg font-medium">
+                  <Link
+                    to="/"
+                    className={`flex items-center gap-2 text-lg font-semibold ${
+                      isActive("/") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    <img src="" alt="WN" className="h-6 w-6" />
+                    <span>CNER - LAB</span>
+                  </Link>
+                  <Link
+                    to="/"
+                    className={`hover:text-foreground ${
+                      isActive("/") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to="/components"
+                    className={`hover:text-foreground ${
+                      isActive("/components") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Components
+                  </Link>
+
+                  <Link
+                    to="/cart"
+                    className={`hover:text-foreground ${
+                      isActive("/cart") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Cart
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    className={`hover:text-foreground ${
+                      isActive("/contact") ? "text-blue-600 font-bold" : ""
+                    }`}
+                  >
+                    Contact us
+                  </Link>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          )}
           {/* User menu */}
           <div className="flex items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
             {!isLoggedIn ? (
