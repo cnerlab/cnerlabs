@@ -66,7 +66,9 @@ import {
   AlertCircle,
   CheckCircle,
   Loader2,
+  ArrowRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface CartItem {
   _id: string;
@@ -213,6 +215,8 @@ const CartPage: React.FC = () => {
     }
   };
 
+  const isActive = (path: string) => location.pathname === path;
+
   const getTotalItems = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
@@ -280,9 +284,21 @@ const CartPage: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 Add some components to get started
               </p>
-              <Button onClick={() => (window.location.href = "/components")}>
+              {/* <Button onClick={() => (window.location.href = "/components")}>
                 Browse Components
-              </Button>
+              </Button> */}
+
+              <Link
+                to="/components"
+                className={`flex items-center justify-center gap-2 px-4 py-2 border rounded-lg transition-colors bg-black ${
+                  isActive("/components")
+                    ? "text-blue-600 font-bold border-blue-600"
+                    : "text-muted-foreground border-muted"
+                }`}
+              >
+                Browse Components
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </CardContent>
           </Card>
         ) : (
