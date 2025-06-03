@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   <img
     src="https://i.ibb.co/FLjX6FXQ/IMG-20250603-WA0008.jpg"
     alt="CNERLAB Logo"
-    className="w-10 h-10 rounded-xl shadow-lg object-cover"
+    className="rounded-xl shadow-lg"
   />
 </Link>
 
