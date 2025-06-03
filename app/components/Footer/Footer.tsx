@@ -9,14 +9,42 @@ const Footer: React.FC = () => {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <Link to="/" className="flex items-center">
-  <img
-    src="https://i.ibb.co/FLjX6FXQ/IMG-20250603-WA0008.jpg"
-    alt="CNERLAB Logo"
-    className="rounded-xl shadow-lg"
-  />
-</Link>
+              {/* <Link to="/" className="flex items-center">
+                <img
+                  src="https://i.ibb.co/FLjX6FXQ/IMG-20250603-WA0008.jpg"
+                  alt="CNERLAB Logo"
+                  className="rounded-xl shadow-lg"
+                />
+              </Link> */}
 
+              {/* <Link to="/" className="flex items-center">
+                <img
+                  src="https://i.ibb.co/FLjX6FXQ/IMG-20250603-WA0008.jpg"
+                  alt="CNERLAB Logo"
+                  className="bg-white max-w-xs" // Adjust the max-w value as needed (max-w-xs, max-w-sm, etc.)
+                />
+              </Link> */}
+
+              <div className="flex items-center space-x-4">
+                <img
+                  src="https://i.ibb.co/ZzDCdLd0/cnerlab-logo.jpg"
+                  alt="CNERLAB Logo"
+                  className="rounded-xl w-12 h-12 shadow-lg"
+                />
+                <div className="text-left">
+                  <p className="font-semibold text-sm">
+                    COMPUTATIONAL NEUROSCIENCE AND
+                  </p>
+                  <p className="font-semibold text-sm">
+                    ENGINEERING{" "}
+                    <span className="text-blue-400">RESEARCH LABORATORY</span>
+                  </p>
+                  <p className="font-semibold text-sm text-gray-700">
+                    <span className="text-blue-400">CNERlab</span>
+                    @BMSIT
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>

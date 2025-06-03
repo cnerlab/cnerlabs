@@ -419,7 +419,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto">
           <motion.div className="text-center mb-16" variants={itemVariants}>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose ComponentLab?
+              Why Choose <span className="text-blue-400">CNERlab</span>?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Experience the future of component management with our

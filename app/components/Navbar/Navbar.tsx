@@ -628,6 +628,13 @@ const Navbar: React.FC = () => {
       <div className="flex w-full flex-col">
         <header className="sticky z-[1] top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900">
           <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+            {/* https://bmsit.ac.in/public/assets/images/logo/logo.png */}
+
+            <img
+              src="https://bmsit.ac.in/public/assets/images/logo/logo.png"
+              className="h-10 me-3"
+              alt="FlowBite Logo"
+            />
             <Link
               to="/"
               className={`flex items-center gap-2 text-lg font-semibold md:text-base ${
@@ -655,7 +662,7 @@ const Navbar: React.FC = () => {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
+            <SheetContent side="left" className="p-4">
               <nav className="grid gap-6 text-lg font-medium">
                 {isAdmin === "admin" ? renderAdminLinks() : renderUserLinks()}
               </nav>
