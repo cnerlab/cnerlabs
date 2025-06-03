@@ -55,12 +55,15 @@ const Home: React.FC = () => {
 
         // Accessing data from responses
 
-        console.log("Components Response:", componentsResponse.data);
-        console.log("Requests Response:", requestsResponse.data);
-        console.log("Visitors Response:", visitorsResponse.data);
-        const totalComponents = componentsResponse.data.totalComponents || 0;
-        const totalRequests = requestsResponse.data.count || 0;
-        const totalVisitors = visitorsResponse.data.count || 0;
+        console.log(
+          "Components Response:",
+          componentsResponse.data.totalComponents
+        );
+        console.log("Requests Response:", requestsResponse.data.count);
+        console.log("Visitors Response:", visitorsResponse.data.count);
+        const totalComponents = componentsResponse.data?.totalComponents || 0;
+        const totalRequests = requestsResponse.data?.count || 0;
+        const totalVisitors = visitorsResponse.data?.count || 0;
 
         const finalStats = {
           totalComponents,
