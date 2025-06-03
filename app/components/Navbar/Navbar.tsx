@@ -712,9 +712,9 @@ const Navbar: React.FC = () => {
                   <DropdownMenuItem onClick={() => navigate("/purchases")}>
                     My Purchases
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => navigate("/edit-profile")}>
+{/*                   <DropdownMenuItem onClick={() => navigate("/edit-profile")}>
                     Edit Profile
-                  </DropdownMenuItem>
+                  </DropdownMenuItem> */}
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={handleLogout}>
                     <LogOut className="mr-2 h-4 w-4" />
