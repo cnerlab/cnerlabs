@@ -9,14 +9,14 @@ const Footer: React.FC = () => {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <Link to="/" className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <Cog className="text-white w-4 h-4" />
-                </div>
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  CNERLAB
-                </span>
-              </Link>
+              <Link to="/" className="flex items-center">
+  <img
+    src="https://i.ibb.co/FLjX6FXQ/IMG-20250603-WA0008.jpg"
+    alt="CNERLAB Logo"
+    className="w-10 h-10 rounded-xl shadow-lg object-cover"
+  />
+</Link>
+
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
