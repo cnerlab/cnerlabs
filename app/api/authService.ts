@@ -24,7 +24,7 @@ export const signIn = async (data: any) => {
 };
 
 export const logoutUser = async () => {
-  return apiClient.post("auth/logout");
+  return apiClient.head("auth/logout");
 };
 
 // export const forgotPassword = async (data:{email: string}) => {
